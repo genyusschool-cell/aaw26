@@ -8,7 +8,7 @@
 <body>
 <x-dc>
 <helmet>
-<title>Asturias AfterWork 2026 · Inscripción</title>
+<title>Asturias AfterWork 2026 by Unicaja · Inscripción</title>
 <link rel="stylesheet" href="_ds/genyus-school-design-system-87b1a3d4-ed31-4494-8c36-a6c785d7ed07/tokens/fonts.css">
 <link rel="stylesheet" href="_ds/genyus-school-design-system-87b1a3d4-ed31-4494-8c36-a6c785d7ed07/tokens/colors.css">
 <link rel="stylesheet" href="_ds/genyus-school-design-system-87b1a3d4-ed31-4494-8c36-a6c785d7ed07/tokens/typography.css">
@@ -48,7 +48,11 @@ a:hover{color:#3a2aa8}
       <span>Part of the Future Minds ecosystem</span>
       <span style="color:#ffd800;">VIII Edición · 2026</span>
     </div>
-    <h1 style="margin:0; font-family:'Anton',sans-serif; font-weight:400; font-size:clamp(64px,12.5vw,189px); line-height:0.94; letter-spacing:0.02em; text-transform:uppercase; color:#ffd800; text-wrap:balance;">Asturias After Work 2026</h1>
+    <h1 style="margin:0; font-family:'Anton',sans-serif; font-weight:400; font-size:clamp(64px,12.5vw,189px); line-height:0.94; letter-spacing:0.02em; text-transform:uppercase; color:#ffd800; text-wrap:balance;">Asturias AfterWork 2026</h1>
+    <div style="display:flex; align-items:center; gap:14px; margin-top:calc(-1 * clamp(12px,2.5vw,32px));">
+      <span style="font-size:clamp(18px,2vw,24px); font-weight:600; color:#ffffff;">by</span>
+      <img src="assets/unicaja-white.svg" alt="Unicaja" style="height:clamp(30px,3.6vw,46px); width:auto; display:block;">
+    </div>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr)); gap:clamp(24px,4vw,48px); align-items:end;">
       <div style="display:flex; flex-direction:column; gap:28px;">
         <p style="margin:0; font-size:clamp(20px,2.2vw,28px); line-height:1.3; color:#ffffff; text-wrap:pretty; max-width:560px;">El encuentro que reúne a quienes construyen el futuro empresarial de Asturias.</p>
@@ -63,6 +67,40 @@ a:hover{color:#3a2aa8}
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- LOGOS PARTNERS -->
+<section id="logos-partners" data-screen-label="Logos partners" style="padding:clamp(48px,6vw,80px) clamp(16px,4vw,48px) 0;">
+  <div style="max-width:1280px; margin:0 auto; display:flex; flex-direction:column; gap:20px;">
+    <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; font-weight:700; color:#6a6399;">Partners 2026</span>
+    <div style="background:#ffffff; border-radius:40px; padding:clamp(28px,4vw,48px); display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:24px 48px; align-items:center;">
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <span style="align-self:flex-start; background:#1d1068; color:#ffd800; border-radius:800px; padding:6px 14px; font-size:13px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase;">Main Partner</span>
+        <span style="font-size:17px; line-height:1.5; color:#433a7d; text-wrap:pretty;">Asturias AfterWork 2026 se celebra de la mano de Unicaja.</span>
+      </div>
+      <img src="assets/unicaja.svg" alt="Unicaja" style="width:100%; max-width:440px; height:auto; display:block; justify-self:center;">
+    </div>
+    <sc-if value="{{ hasPremium }}" hint-placeholder-val="{{ false }}">
+      <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr)); gap:16px;">
+        <sc-for list="{{ premium }}" as="p" hint-placeholder-count="0">
+          <div style="background:#ffffff; border-radius:28px; padding:24px 28px; display:flex; flex-direction:column; gap:14px;">
+            <span style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; font-weight:800; color:#6a6399;">Premium Partner</span>
+            <div role="img" aria-label="{{ p.name }}" style="height:56px; width:100%; background:center / contain no-repeat; background-image:{{ p.bg }};"></div>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+    <sc-if value="{{ hasPartners }}" hint-placeholder-val="{{ false }}">
+      <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,180px),1fr)); gap:12px;">
+        <sc-for list="{{ partners }}" as="p" hint-placeholder-count="0">
+          <div style="background:#ffffff; border-radius:22px; padding:18px 20px; display:flex; flex-direction:column; gap:10px;">
+            <span style="font-size:10px; letter-spacing:0.16em; text-transform:uppercase; font-weight:800; color:#6a6399;">Partner</span>
+            <div role="img" aria-label="{{ p.name }}" style="height:36px; width:100%; background:center / contain no-repeat; background-image:{{ p.bg }};"></div>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
   </div>
 </section>
 
@@ -196,7 +234,7 @@ a:hover{color:#3a2aa8}
         <div style="display:flex; flex-direction:column; gap:20px; align-items:flex-start; padding:12px 0;">
           <span style="width:64px; height:64px; border-radius:800px; background:#1fa35b; color:#ffffff; display:flex; align-items:center; justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; display:block;"><path d="M20 6 9 17l-5-5"></path></svg></span>
           <h3 style="margin:0; font-family:'Anton',sans-serif; font-weight:400; font-size:clamp(36px,4vw,52px); line-height:1; letter-spacing:0.02em; text-transform:uppercase; color:#1d1068;">¡Muchas gracias!</h3>
-          <p style="margin:0; font-size:18px; line-height:1.55; color:#1d1068; text-wrap:pretty;">Tu plaza en Asturias After Work 2026 está reservada. Revisa tu correo para continuar con el pago y confirmar tu presencia.</p>
+          <p style="margin:0; font-size:18px; line-height:1.55; color:#1d1068; text-wrap:pretty;">Tu plaza en Asturias AfterWork 2026 <span style="font-size:14px; color:#6a6399;">by Unicaja</span> está reservada. Revisa tu correo para continuar con el pago y confirmar tu presencia.</p>
           <p style="margin:0; font-size:17px; line-height:1.55; color:#433a7d; text-wrap:pretty;">Una vez realizado el pago, recibirás un mail de confirmación final.</p>
           <p style="margin:0; font-size:20px; font-weight:800; color:#1d1068;">¡Te esperamos!</p>
         </div>
@@ -413,7 +451,7 @@ a:hover{color:#3a2aa8}
     <div style="display:flex; flex-direction:column; gap:16px;">
       <span style="font-size:12px; letter-spacing:0.2em; text-transform:uppercase; font-weight:800; color:#ffd800;">Future Minds Ecosystem</span>
       <h2 style="margin:0; font-family:'Anton',sans-serif; font-weight:400; font-size:clamp(36px,4.5vw,60px); line-height:1; letter-spacing:0.02em; text-transform:uppercase;">Cuatro formatos, un mismo ecosistema.</h2>
-      <p style="margin:0; font-size:17px; line-height:1.55; text-wrap:pretty;">Future Minds conecta liderazgo, empresa, talento, educación e impacto en Asturias durante todo el año. Asturias After Work es la puerta de entrada.</p>
+      <p style="margin:0; font-size:17px; line-height:1.55; text-wrap:pretty;">Future Minds conecta liderazgo, empresa, talento, educación e impacto en Asturias durante todo el año. Asturias AfterWork <span style="font-size:14px;">by Unicaja</span> es la puerta de entrada.</p>
       <a href="{{ fmUrl }}" target="_blank" rel="noopener" style="align-self:flex-start; display:inline-flex; align-items:center; gap:10px; margin-top:8px; background:#ffffff; color:#e94b4c; text-decoration:none; font-weight:800; font-size:16px; padding:16px 26px; border-radius:800px; transition:transform 160ms;" style-hover="color:#c93a3b;" style-active="transform:scale(0.96);">Ver el ecosistema Future Minds <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; display:block;"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
     </div>
     <img src="assets/future-minds.png" alt="Movimiento Future Minds" style="width:100%; max-width:420px; height:auto; display:block; justify-self:center;">
@@ -425,13 +463,13 @@ a:hover{color:#3a2aa8}
   <div style="max-width:1280px; margin:0 auto; display:flex; flex-wrap:wrap; gap:32px; justify-content:space-between; align-items:center;">
     <div style="display:flex; align-items:center; gap:14px; border:1.5px solid #ffd800; padding:12px 18px; color:#ffd800;">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffd800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; display:block;"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
-      <span style="display:flex; flex-direction:column; line-height:1.05; font-weight:800; font-size:17px;">Asturias<br>AfterWork<span style="font-size:24px;">2026</span></span>
+      <span style="display:flex; flex-direction:column; line-height:1.05; font-weight:800; font-size:17px;">Asturias AfterWork<span style="font-size:24px;">2026</span><span style="font-size:12px; font-weight:600; color:#ffffff; margin-top:4px;">by Unicaja</span></span>
     </div>
     <div style="display:flex; flex-wrap:wrap; gap:8px 24px; font-size:14px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#e4e0f7;">
       <span>3 de diciembre</span><span>18:00 h</span><span>Hacienda La Llorea Golf, Gijón</span>
     </div>
     <div style="display:flex; flex-direction:column; gap:6px; font-size:14px;">
-      <span style="color:#c9c3ec;">Parte del ecosistema Future Minds</span>
+      <span style="color:#c9c3ec;">Main Partner: Unicaja · Parte del ecosistema Future Minds</span>
       <a href="https://www.genyusschool.com/pol%C3%ADtica-de-privacidad" target="_blank" rel="noopener" style="color:#ffffff;">Política de privacidad</a>
     </div>
   </div>
@@ -451,9 +489,12 @@ const FAQS = [
   ['¿Se harán fotos y vídeos?', 'Sí. El evento se fotografía y graba con fines de comunicación, y el material puede compartirse con los patrocinadores.'],
   ['Quiero que mi empresa sea partner, ¿con quién hablo?', 'Escribe a Pedro Carrillo en asturiasafterwork@gmail.com o llama al 649 347 471 (teléfono y WhatsApp).']
 ];
+// Añadir logos: { name: 'Marca', logo: 'assets/marca.svg' }. Unicaja (Main Partner) siempre va primero y más grande.
+const PREMIUM_LOGOS = [];
+const PARTNER_LOGOS = [];
 const WA = 'https://wa.me/34649347471?text=';
 const TIERS = [
-  { name: 'Main Partner', items: ['Naming del evento: «AsturiasAfterWork 2026, con [tu marca]»', 'Creatividad propia y presencia destacada en la landing de inscripción', "Escenario: 2' de intervención + foto en escenario", 'Logo en el photocall (panel de fotos del evento)', 'Activación de marca exclusiva: ubicación propia y preferente (stand)', 'Mención especial durante el evento', 'Contenido audiovisual y fotografías profesionales para tus canales', 'Máxima presencia de marca en comunicación, web, RRSS, photocall y materiales', 'Acceso a la BBDD de inscritos (conforme a la normativa de protección de datos)', 'Posibilidad de sorteo de un regalo entre los asistentes', '4 entradas VIP + 8 entradas standard', 'Presencia en la comunicación previa, durante y posterior', 'Bolsa de bienvenida AAW: logo + 2 objetos de marca'] },
+  { name: 'Main Partner', items: ['Naming del evento: «Asturias AfterWork 2026, con [tu marca]»', 'Creatividad propia y presencia destacada en la landing de inscripción', "Escenario: 2' de intervención + foto en escenario", 'Logo en el photocall (panel de fotos del evento)', 'Activación de marca exclusiva: ubicación propia y preferente (stand)', 'Mención especial durante el evento', 'Contenido audiovisual y fotografías profesionales para tus canales', 'Máxima presencia de marca en comunicación, web, RRSS, photocall y materiales', 'Acceso a la BBDD de inscritos (conforme a la normativa de protección de datos)', 'Posibilidad de sorteo de un regalo entre los asistentes', '4 entradas VIP + 8 entradas standard', 'Presencia en la comunicación previa, durante y posterior', 'Bolsa de bienvenida AAW: logo + 2 objetos de marca'] },
   { name: 'Premium Partner', items: ['Cerca de la comunidad empresarial asturiana, antes, durante y después', "Escenario: 1' de intervención + foto en escenario", 'Activación de marca con stand propio', 'Comunicación previa, durante y posterior', 'Contenido audiovisual y fotografías profesionales', 'Logo destacado en comunicación, web, RRSS y photocall', 'Creatividad y presencia en la landing de inscripción', '2 entradas VIP + 4 entradas standard', 'Mención especial durante el evento', 'Posibilidad de sorteo entre asistentes', 'Bolsa de bienvenida AAW: logo + 2 objetos de marca'] },
   { name: 'Partner', items: ['Tu marca entra en la comunidad: red de +200 empresas y directivos', 'Presencia de marca en la landing de inscripción', 'Presencia en la zona de networking (stand común)', '1 entrada VIP + 2 entradas standard', 'Mención durante el evento', 'Inclusión en la comunicación general a la comunidad', 'Fotografías profesionales de la presencia de marca', 'Logo en la comunicación oficial, web y RRSS + Photocall + Bolsa de bienvenida', "Mesa redonda de partners (10')"] }
 ];
@@ -524,7 +565,9 @@ class Component extends DCLogic {
     return {
       f, e, onField: this.onField, submit: this.submit,
       fmUrl: this.props.futureMindsUrl || '#future-minds',
-      tiers: TIERS.reduce((o, t, i) => { const open = !!(this.state.openTiers || {})[i]; o['t' + i] = { items: t.items, rows: open ? '1fr' : '0fr', op: open ? 1 : 0, rot: open ? 'rotate(90deg)' : 'rotate(0deg)', wa: WA + encodeURIComponent('Hola Pedro, quiero participar como ' + t.name + ' en Asturias After Work 2026.'), toggle: () => this.setState(s => ({ openTiers: { ...(s.openTiers || {}), [i]: !(s.openTiers || {})[i] } })) }; return o; }, {}),
+      tiers: TIERS.reduce((o, t, i) => { const open = !!(this.state.openTiers || {})[i]; o['t' + i] = { items: t.items, rows: open ? '1fr' : '0fr', op: open ? 1 : 0, rot: open ? 'rotate(90deg)' : 'rotate(0deg)', wa: WA + encodeURIComponent('Hola Pedro, quiero participar como ' + t.name + ' en Asturias AfterWork 2026 by Unicaja.'), toggle: () => this.setState(s => ({ openTiers: { ...(s.openTiers || {}), [i]: !(s.openTiers || {})[i] } })) }; return o; }, {}),
+      premium: PREMIUM_LOGOS.map(p => ({ ...p, bg: `url("${p.logo}")` })), hasPremium: PREMIUM_LOGOS.length > 0,
+      partners: PARTNER_LOGOS.map(p => ({ ...p, bg: `url("${p.logo}")` })), hasPartners: PARTNER_LOGOS.length > 0,
       sectors: SECTORS, channels: CHANNELS, agenda: AGENDA,
       sending: status === 'sending',
       submitLabel: status === 'sending' ? 'Enviando…' : 'Reserva tu plaza',

@@ -1,4 +1,4 @@
-# Asturias After Work 2026 · Web de inscripción
+# Asturias AfterWork 2026 · Web de inscripción
 
 Web estática. No necesita build.
 
